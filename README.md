@@ -5,11 +5,30 @@
 
 ## Overview
 
-What happens to your crypto when you die? 
+### What happens to your crypto when you die? 
 
 It’s tough to think about death, but it’s essential to plan for your future. 
 
 Thats why were building Memento Mori: a concept in philosophy - a reminder that we’re all mortal, and will die.
+
+**Existing will and recovery options in crypto are flawed:**
+
+- Require using a centralized intermediary to send crypto to your heirs
+- Split your private keys across multiple people: creates a stalemate where heirs are incentivized to not share their part of the private key before another
+
+**We need a system that is structured like traditional trusts: something proven for nearly a thousand years.** 
+
+- If person found still alive, ownership is kept
+    - Funds not transferred to heirs,  rather held in the trust
+- Person can configure how trust is used - not blindly giving money to hairs
+    - ZK verification of what funds are used on
+    - timed release of funds (like standard trust)
+
+### Sponsors
+
+- Hyli
+- ZKPassport
+- Boundless
 
 ## Features
 
