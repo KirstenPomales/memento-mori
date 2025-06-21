@@ -9,15 +9,15 @@ export function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 dark:text-gray-100">
+    <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8">
-        <Header showCreateTrustButton={false} />
+        <Header />
 
         {/* Centered Create Trust Button */}
         <div className="flex justify-center items-center min-h-[60vh]">
           <button
             onClick={handleCreateTrustClick}
-            className="px-8 py-4 bg-blue-600 text-white text-xl font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+            className="px-8 py-4 bg-primary text-primary-foreground text-xl font-semibold rounded-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
           >
             Create a Trust
           </button>
