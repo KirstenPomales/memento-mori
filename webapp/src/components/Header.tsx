@@ -8,7 +8,6 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { ThemeToggle } from "./ThemeToggle";
 import logoImage from "/images/logo.png";
 
 interface HeaderProps {
@@ -84,12 +83,8 @@ export function Header({ title = "Memento Mori" }: HeaderProps) {
                 />
               )}
             </div>
-            <p className="text-xs text-muted-foreground">{userData.email}</p>
           </div>
         </div>
-
-        {/* Theme Toggle */}
-        <ThemeToggle />
 
         {/* Menu Button */}
         <div className="relative">
