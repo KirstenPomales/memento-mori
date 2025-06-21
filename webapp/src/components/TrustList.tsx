@@ -215,12 +215,6 @@ export default function TrustList() {
                       {copiedTrustId === trust.id ? "Copied!" : "Copy Link"}
                     </Button>
                     <Dialog>
-                      <DialogTrigger asChild>
-                        <Button variant="outline" size="sm">
-                          <Eye className="w-4 h-4 mr-2" />
-                          View Details
-                        </Button>
-                      </DialogTrigger>
                       <DialogContent className="max-w-2xl">
                         <DialogHeader>
                           <DialogTitle>

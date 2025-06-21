@@ -44,8 +44,16 @@ export function Header({ title = "Memento Mori" }: HeaderProps) {
   return (
     <div className="flex justify-between items-center mb-8 sticky top-0 z-50 bg-background py-4 border-b border-border">
       <div className="flex items-center gap-3">
-        <img src={logoImage} alt="Memento Mori Logo" className="h-10 w-auto" />
-        <h1 className="text-3xl font-bold text-foreground font-unifraktur">
+        <img
+          src={logoImage}
+          alt="Memento Mori Logo"
+          className="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity"
+          onClick={() => navigate("/")}
+        />
+        <h1
+          className="text-3xl font-bold text-foreground font-unifraktur cursor-pointer hover:opacity-80 transition-opacity"
+          onClick={() => navigate("/")}
+        >
           {title}
         </h1>
       </div>

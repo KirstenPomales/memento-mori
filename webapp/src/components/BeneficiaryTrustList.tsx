@@ -221,12 +221,6 @@ export default function BeneficiaryTrustList() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Dialog>
-                      <DialogTrigger asChild>
-                        <Button variant="outline" size="sm">
-                          <Eye className="w-4 h-4 mr-2" />
-                          View Details
-                        </Button>
-                      </DialogTrigger>
                       <DialogContent className="max-w-2xl">
                         <DialogHeader>
                           <DialogTitle>
