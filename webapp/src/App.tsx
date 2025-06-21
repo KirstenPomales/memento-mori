@@ -1,8 +1,10 @@
-import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import { Toaster } from "@/components/ui/sonner";
 import Home from "./pages/Home";
 import ZKPassport from "./pages/ZKPassport";
+import Config from "./pages/Config";
+import FunderTrusts from "./pages/FunderTrusts";
+import BeneficiaryTrusts from "./pages/BeneficiaryTrusts";
+import TrustDetail from "./pages/TrustDetail";
 
 function App() {
   return (
@@ -10,6 +12,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/zk" element={<ZKPassport />} />
+        <Route path="/config" element={<Config />} />
+        <Route path="/fundertrusts" element={<FunderTrusts />} />
+        <Route path="/beneficiarytrusts" element={<BeneficiaryTrusts />} />
+        <Route path="/trust/:trustId" element={<TrustDetail />} />
       </Routes>
       {/* <Toaster /> */}
     </div>
