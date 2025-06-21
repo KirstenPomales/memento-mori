@@ -41,7 +41,7 @@ export function Header({ title = "Memento Mori" }: HeaderProps) {
   ];
 
   return (
-    <div className="flex justify-between items-center mb-8 sticky top-0 z-50 bg-background py-4 border-b border-border">
+    <div className="flex justify-between items-center mb-8 sticky top-0 z-50 py-4 border-b border-border">
       <div className="flex items-center gap-3">
         <img
           src={logoImage}
