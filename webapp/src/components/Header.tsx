@@ -8,6 +8,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import logoImage from "/images/logo.png";
 
 interface HeaderProps {
   title?: string;
@@ -40,23 +41,34 @@ export function Header({ title = "Memento Mori" }: HeaderProps) {
   ];
 
   return (
-    <div className="flex justify-between items-center mb-8 sticky top-0 z-50 bg-white dark:bg-gray-900 py-4 border-b border-gray-200 dark:border-gray-700">
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-        {title}
-      </h1>
+    <div className="flex justify-between items-center mb-8 sticky top-0 z-50 py-4 border-b border-border">
+      <div className="flex items-center gap-3">
+        <img
+          src={logoImage}
+          alt="Memento Mori Logo"
+          className="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity"
+          onClick={() => navigate("/")}
+        />
+        <h1
+          className="text-3xl font-bold text-foreground font-unifraktur cursor-pointer hover:opacity-80 transition-opacity"
+          onClick={() => navigate("/")}
+        >
+          {title}
+        </h1>
+      </div>
 
       <div className="flex items-center gap-4">
         {/* Account Section */}
-        <div className="flex items-center gap-3 px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+        <div className="flex items-center gap-3 px-3 py-2 rounded-lg bg-muted border border-border">
           <Avatar className="h-8 w-8">
             <AvatarImage src={userData.avatar} alt={userData.name} />
-            <AvatarFallback className="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300">
+            <AvatarFallback className="bg-primary/10 text-primary">
               <User className="h-4 w-4" />
             </AvatarFallback>
           </Avatar>
           <div className="hidden sm:block">
             <div className="flex items-center gap-2">
-              <p className="text-sm font-medium text-gray-900 dark:text-white">
+              <p className="text-sm font-medium text-foreground">
                 {userData.name}
               </p>
               {userData.isVerified ? (
@@ -71,9 +83,6 @@ export function Header({ title = "Memento Mori" }: HeaderProps) {
                 />
               )}
             </div>
-            <p className="text-xs text-gray-500 dark:text-gray-400">
-              {userData.email}
-            </p>
           </div>
         </div>
 
@@ -83,7 +92,7 @@ export function Header({ title = "Memento Mori" }: HeaderProps) {
             <DropdownMenuTrigger asChild>
               <Button
                 variant="ghost"
-                className="h-12 w-12 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
+                className="h-12 w-12 bg-muted border border-border hover:bg-accent"
               >
                 <Star className="h-8 w-8" />
               </Button>
